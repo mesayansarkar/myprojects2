@@ -1,2 +1,2 @@
 # myprojects2
-ok
+my first project using html,css
