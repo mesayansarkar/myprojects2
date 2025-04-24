@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="website icon" type="png" href="html.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+     <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-s"></i>
+                    <div class="logo-text">SAYAN SARKAR</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#" onclick="refreshPage()">Home</a></li>
+                        <li><a href="#">Resume</a></li>
+                        <li><a href="#" onclick="hightlightBio()">About Us</a></li>
+                        <li><a href="https://wa.me/9382256109" target="_blank">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                 <div class="hero-pic">
+                    <img src="me.jpg" alt="profile pic">
+                 </div>
+                 <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Frontend Developer</span></h5>
+                    <div id="my-name"><h1>Sayan Sarkar</h1></div>
+                    <div id="bio">
+                    <p> Hello !! I am Sayan Sarkar a 20 year old collage student.Currently studying BCA in Brainware University.My goal is to be a proffessional web developer.
+                    </p></div>
+
+                    <div class="btn-group">
+                       <a class="btn active" href="cv.pdf">Download CV</a>
+                       <a href="#" class="btn">Contact</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://wa.me/9382256109"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/rk.sayan_/"><i class="fa-brands fa-instagram"></i></a>
+
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </div>
+    
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+        // animation lekha change hoy !!
+        var typed=new Typed(".input",{
+            strings:["Frontend Developer","UX Designer","Web Developer"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+
+        // function jeta about e click korle highlight kore
+        function hightlightBio () {
+            const para = document.getElementById("bio");
+      para.style.backgroundColor = 'blue' ;
+
+       setTimeout(() => {
+        para.style.backgroundColor = 'hsl(268, 93%, 12%)' ;
+      }, 3000);
+        }
+        // the page rerfresh hobe home click korle
+        function refreshPage() {
+      location.reload();
+    }
+     </script>
+</body>
+</html>
